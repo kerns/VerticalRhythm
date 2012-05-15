@@ -1,6 +1,6 @@
 # Vertical Rhythm
 
-This is a Sass mixin that abstracts the maths involved in applying vertical rhythms with CSS.
+A Sass mixin that abstracts the maths involved in applying vertical rhythms with CSS.
 
 ## Usage
 
