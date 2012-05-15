@@ -2,6 +2,10 @@
 
 A Sass mixin that abstracts the maths involved in applying vertical rhythms with CSS.
 
+## Example
+
+You can the result of the example included [here](//oliverjash.github.com/vertical-rhythm/)
+
 ## Usage
 
 	// Custom variables. These are the defaults.
