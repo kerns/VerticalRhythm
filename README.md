@@ -4,7 +4,7 @@ A Sass mixin that abstracts the maths involved in applying vertical rhythms with
 
 ## Example
 
-You can the result of the example included [here](//oliverjash.github.com/vertical-rhythm/)
+You can the result of the example included [here](//oliverjash.github.com/vertical-rhythm/).
 
 ## Usage
 
