@@ -1,0 +1,57 @@
+$font-size: 1em !default;
+$line-height: 1.5em !default;
+
+// Convert line height to pixel values
+@mixin baseline($grid: false, $behind: true) {
+	body {
+		// Normalize body font-size - em measured vertical rhythms are relative to this
+		font-size: $font-size;
+
+		@if ($grid == true) {
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+
+				// Put the grid behind the body
+				@if ($behind) {
+					z-index: -9999;
+				} @else {
+					pointer-events: none;
+					z-index: 9999;
+				}
+
+				background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
+				background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3)));
+				background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%);
+				background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.3) 100%);
+				background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.3) 100%);
+				background-image: linear-gradient(top, rgba(0,0,0,0.3) 95%,rgba(0,0,0,0.3) 100%);
+				-webkit-background-size: 100% $line-height;
+				   -moz-background-size: 100% $line-height;
+				        background-size: 100% $line-height;
+			}
+		}
+
+	}
+}
+
+@mixin vertical-rhythm($size, $lines, $margin-bottom: true) {
+	$font-size: ($size * 1em);
+	$baseline: ($font-size * $line-height);
+	$line-span: ($line-height * $lines);
+
+	@if ($margin-bottom == true) {
+		margin-bottom: ($line-height / $font-size) * 1em;
+	} @else {
+		margin-bottom: 0;
+	}
+
+	margin-top: 0;
+	font-size: $font-size;
+	line-height: ($line-span / $font-size);
+}

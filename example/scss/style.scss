@@ -1,0 +1,43 @@
+$font-size: 1em;
+$line-height: 1.5em;
+
+@import "library/vertical-rhythm";
+
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: sans-serif;
+}
+
+a {
+	color: inherit;
+}
+
+@include baseline(true);
+
+h1 {
+	@include vertical-rhythm(3, 2);
+}
+
+h2 {
+	@include vertical-rhythm(2, 2);
+}
+
+h3 {
+	@include vertical-rhythm(1.5, 1);
+}
+
+h4 {
+	@include vertical-rhythm(1.25, 1, false);
+}
+
+h5 {
+	@include vertical-rhythm(1, 1, false);
+}
+
+h6 {
+	@include vertical-rhythm(1, 1, false);
+}
+
+p {
+	@include vertical-rhythm(1, 1);
+}

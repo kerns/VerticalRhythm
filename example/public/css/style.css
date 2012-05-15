@@ -1,0 +1,80 @@
+/* line 6, /Users/Oliver/Repositories/vertical-rhythm/example/scss/style.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif; }
+
+/* line 11, /Users/Oliver/Repositories/vertical-rhythm/example/scss/style.scss */
+a {
+  color: inherit; }
+
+/* line 6, /Users/Oliver/Repositories/vertical-rhythm/example/scss/library/vertical-rhythm.scss */
+body {
+  font-size: 1em;
+  position: relative; }
+  /* line 12, /Users/Oliver/Repositories/vertical-rhythm/example/scss/library/vertical-rhythm.scss */
+  body:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -9999;
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.3) 100%);
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.3) 100%);
+    -webkit-background-size: 100% 1.5em;
+    -moz-background-size: 100% 1.5em;
+    background-size: 100% 1.5em; }
+
+/* line 17, /Users/Oliver/Repositories/vertical-rhythm/example/scss/style.scss */
+h1 {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  font-size: 3em;
+  line-height: 1; }
+
+/* line 21, /Users/Oliver/Repositories/vertical-rhythm/example/scss/style.scss */
+h2 {
+  margin-bottom: 0.75em;
+  margin-top: 0;
+  font-size: 2em;
+  line-height: 1.5; }
+
+/* line 25, /Users/Oliver/Repositories/vertical-rhythm/example/scss/style.scss */
+h3 {
+  margin-bottom: 1em;
+  margin-top: 0;
+  font-size: 1.5em;
+  line-height: 1; }
+
+/* line 29, /Users/Oliver/Repositories/vertical-rhythm/example/scss/style.scss */
+h4 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1.25em;
+  line-height: 1.2; }
+
+/* line 33, /Users/Oliver/Repositories/vertical-rhythm/example/scss/style.scss */
+h5 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1em;
+  line-height: 1.5; }
+
+/* line 37, /Users/Oliver/Repositories/vertical-rhythm/example/scss/style.scss */
+h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1em;
+  line-height: 1.5; }
+
+/* line 41, /Users/Oliver/Repositories/vertical-rhythm/example/scss/style.scss */
+p {
+  margin-bottom: 1.5em;
+  margin-top: 0;
+  font-size: 1em;
+  line-height: 1.5; }
