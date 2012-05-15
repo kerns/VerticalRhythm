@@ -27,7 +27,7 @@ Then, for each element you want to apply to the vertical rhythm:
 
 The first parameter specifies the font size you want the element to be, relative to `$font-size`. The second paramater specifies how many lines of the vertical rhythm you would like an element use as its line height. By specifying these values, the mixin calculates the appropriate values for `line-height` and `margin-bottom`.
 
-For exampe, you might want paragraph text to be the default font-size and the same line-height as the vertical rhythm.
+For example, you might want paragraph text to share the default `font-size` and the same `line-height` as the vertical rhythm.
 
 	p {
 		@include vertical-rhythm(1, 1);
@@ -35,4 +35,4 @@ For exampe, you might want paragraph text to be the default font-size and the sa
 
 ### Notes
 
-This mixin currently only works with `em` measurements.
+This mixin currently only works with `em` measurements. `px` is on its way (feel free to contribute).
