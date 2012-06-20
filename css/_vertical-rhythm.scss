@@ -1,7 +1,3 @@
-/*
- * Baseline rule of thumb: 100% = 1 em ~= 16px ~= 14pt
- */
-
 $base-font-size: 16px;
 $base-line-height: 1.5;
 
@@ -23,6 +19,7 @@ $base-line-height: 1.5;
     right: 0;
     bottom: 0;
     left: 0;
+    pointer-events: none;
     background-image: -webkit-linear-gradient(rgba(invert($background-color), 0.2) 1px, transparent 1px);
     -webkit-background-size: 100% ($base-line-height * 1em);
   }
