@@ -1,38 +1,48 @@
-# Vertical Rhythm
+# VerticalRhythm
 
 A Sass mixin that abstracts the maths involved in applying vertical rhythms with CSS.
 
 ## Example
 
-You can the result of the example included [here](http://oliverjash.github.com/vertical-rhythm/).
+You can the result of the example included [here](http://oliverjash.github.com/VerticalRhythm/).
 
 ## Usage
 
-	// Custom variables. These are the defaults.
-	$font-size: 1em;
-	$line-height: 1.5em;
+    // Default variables
+    $base-font-size: 16px;
+    $base-line-height: 1.5;
 
-	// Link to the mixin.
-	@import "library/vertical-rhythm";
+    // Link to the module
+    @import "vertical-rhythm";
 
-	// Parameters: baseline($grid, $behind);
-	@include baseline(true);
+    body {
+      // Call this mixin every time you change the font-size
+      @include establish-baseline();
+    }
 
 Then, for each element you want to apply to the vertical rhythm:
 
-	h1 {
-		// Parameters: vertical-rhythm($font-size, $lines);
-		@include vertical-rhythm(3, 2);
-	}
+    h1 {
+        // Parameters: vertical-rhythm($font-size, $lines);
+        @include vertical-rhythm(3, 2);
+    }
 
-The first parameter specifies the font size you want the element to be, relative to `$font-size`. The second paramater specifies how many lines of the vertical rhythm you would like an element use as its line height. By specifying these values, the mixin calculates the appropriate values for `line-height` and `margin-bottom`.
+To overlay a baseline ruler:
 
-For example, you might want paragraph text to share the default `font-size` and the same `line-height` as the vertical rhythm.
+    body {
+      @include debug-vertical-alignment();
+    }
 
-	p {
-		@include vertical-rhythm(1, 1);
-	}
+The first parameter specifies the font size you want the element to be, relative to `$base-font-size`. The second paramater specifies how many lines of the vertical rhythm you would like an element to use as its line height. By specifying these values, the mixin calculates the appropriate values for `line-height` and `margin-bottom`.
 
-### Notes
+If you want to change the font size at a breakpoint in your design, update the `$base-font-size` variable and re-include the `establish-baseline()` mixin:
 
-This mixin currently only works with `em` measurements. `px` is on its way (feel free to contribute).
+    body {
+      @include establish-baseline();
+      @include debug-vertical-alignment();
+
+      @media screen and (max-width: 500px) {
+        $base-font-size: 16px;
+        @include establish-baseline();
+      }
+    }
