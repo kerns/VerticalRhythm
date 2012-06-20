@@ -1,0 +1,45 @@
+@import "vertical-rhythm";
+
+$base-font-size: 24px;
+$base-line-height: 1.5;
+
+body {
+  @include establish-baseline();
+  @include debug-vertical-alignment(black);
+  background-color: black;
+  font-family: sans-serif;
+  color: white;
+
+  @media screen and (max-width: 500px) {
+    $base-font-size: 16px;
+    @include establish-baseline();
+  }
+}
+
+h1 {
+  @include vertical-rhythm(3, 2);
+}
+
+h2 {
+  @include vertical-rhythm(2, 2);
+}
+
+h3 {
+  @include vertical-rhythm(1.5, 1);
+}
+
+h4 {
+  @include vertical-rhythm(1.25, 1, false);
+}
+
+h5 {
+  @include vertical-rhythm(1, 1, false);
+}
+
+h6 {
+  @include vertical-rhythm(1, 1, false);
+}
+
+p {
+  @include vertical-rhythm(1, 1);
+}

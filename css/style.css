@@ -1,0 +1,66 @@
+/*
+ * Baseline rule of thumb: 100% = 1 em ~= 16px ~= 14pt
+ */
+body {
+  font-size: 24px;
+  line-height: 1.5;
+  position: relative;
+  background-color: black;
+  font-family: sans-serif;
+  color: white; }
+  body:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    -webkit-background-size: 100% 1.5em; }
+  @media screen and (max-width: 500px) {
+    body {
+      font-size: 16px;
+      line-height: 1.5; } }
+
+h1 {
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  font-size: 3em;
+  line-height: 1; }
+
+h2 {
+  margin-bottom: 0.75em;
+  margin-top: 0;
+  font-size: 2em;
+  line-height: 1.5; }
+
+h3 {
+  margin-bottom: 1em;
+  margin-top: 0;
+  font-size: 1.5em;
+  line-height: 1; }
+
+h4 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1.25em;
+  line-height: 1.2; }
+
+h5 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1em;
+  line-height: 1.5; }
+
+h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1em;
+  line-height: 1.5; }
+
+p {
+  margin-bottom: 1.5em;
+  margin-top: 0;
+  font-size: 1em;
+  line-height: 1.5; }

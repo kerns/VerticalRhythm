@@ -1,0 +1,49 @@
+/*
+ * Baseline rule of thumb: 100% = 1 em ~= 16px ~= 14pt
+ */
+
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+@mixin establish-baseline() {
+  // Normalise body font-size
+  // em measures are relative to this
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+@mixin debug-vertical-alignment($background-color: white) {
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: -webkit-linear-gradient(rgba(invert($background-color), 0.2) 1px, transparent 1px);
+    -webkit-background-size: 100% ($base-line-height * 1em);
+  }
+}
+
+@mixin vertical-rhythm($font-size, $lines, $margin-bottom: true) {
+  @if ($margin-bottom == true) {
+    margin-bottom: ($base-line-height / $font-size) * 1em;
+  } @else {
+    margin-bottom: 0;
+  }
+
+  margin-top: 0;
+  font-size: ($font-size * 1em);
+  line-height: (($base-line-height * $lines) / $font-size);
+}
+
+@mixin padding($lines: 1) {
+  padding: (($base-line-height * $lines) * 1em);
+}
+
+@mixin vertical-padding($lines: 1) {
+  padding: (($base-line-height * $lines) * 1em) 0;
+}
