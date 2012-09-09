@@ -20,7 +20,7 @@ You can the result of the example included [here](http://oliverjash.github.com/V
       @include establish-baseline();
     }
 
-Then, for each element you want to apply to the vertical rhythm:
+For each element you want to apply to the vertical rhythm:
 
     h1 {
         // Parameters: vertical-rhythm($font-size, $lines);
